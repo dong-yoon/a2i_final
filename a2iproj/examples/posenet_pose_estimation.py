@@ -22,7 +22,7 @@ POSENET_SHARED_LIB = os.path.join('posenet_lib', os.uname().machine,
 
 def main():
     parser = argparse.ArgumentParser(formatter_class=argparse.ArgumentDefaultsHelpFormatter)
-    parser.add_argument('-m', '--model', required=True, help='File path of .tflite file.')
+    parser.add_argument('-m', '--model', default = 'posenet_mobilenet_v1_075_481_641_quant_decoder_edgetpu.tflite', help='File path of .tflite file.')
     parser.add_argument('-i', '--image', default = None, help='Image to be classified.')
     parser.add_argument('-a', '--movie', default = None, help = 'Movie to be classified.')
     parser.add_argument('-f', '--fps', default = 30,type = int, help = 'FPS of output movie')
